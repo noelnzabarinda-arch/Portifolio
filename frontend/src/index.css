@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+:root {
+  font-family: 'Space Grotesk', 'Arial Narrow', sans-serif;
+  color: #edfdf8;
+  background: #07191d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  --bg: #07191d;
+  --surface: #0d2330;
+  --surface-raised: #14313f;
+  --text: #edfdf8;
+  --muted: #9db8c1;
+  --soft: #dceef3;
+  --line: rgba(233, 244, 247, 0.14);
+  --lime: #6ef3cc;
+  --acid-muted: #3e8f8b;
+  --mono: 'DM Mono', monospace;
+  --page-pad: clamp(22px, 6.1vw, 104px);
+  --content-width: 1600px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; background: var(--bg); }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.5; }
+body::after { position: fixed; inset: 0; z-index: 50; pointer-events: none; content: ''; opacity: 0.045; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.84' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.38'/%3E%3C/svg%3E"); }
+body.is-loading, body.menu-open, body.modal-open { overflow: hidden; }
+#root { width: 100%; overflow: clip; }
+button, a { color: inherit; font: inherit; }
+a { text-decoration: none; }
+button { border: 0; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-offset: 5px; }
+img { display: block; width: 100%; }
+::selection { color: var(--bg); background: var(--lime); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
