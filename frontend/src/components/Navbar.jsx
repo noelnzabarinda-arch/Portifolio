@@ -23,7 +23,7 @@ export default function Navbar() {
 	return (
 		<header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
 			<a className="wordmark" href="#home" onClick={() => setOpen(false)} aria-label={`${portfolio.name}, home`}>
-				<span className="wordmark-mark">{portfolio.firstName.slice(0, 1)}</span>
+				<img src="/logo.svg" alt="" width="34" height="34" style={{ objectFit: 'contain' }} />
 				<span>{portfolio.name}</span>
 			</a>
 			<nav className={`desktop-nav${open ? ' nav-open' : ''}`} aria-label="Main navigation">
